@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* 清新淺灰色背景 (您可以自行更換) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 三欄式網格 */
+    gap: 15px; /* 照片間距 */
+    max-width: 800px; /* 畫廊最大寬度 */
+    padding: 20px;
+    background-color: transparent; /* 設為透明背景，移除底框 */
+    padding: 0; /* 移除內邊距，更貼合無邊框感 */
+    box-shadow: none; /* 移除陰影效果 */
+    border-radius: 0; /* 移除圓角 */
+}
+
+.gallery-item {
+    overflow: hidden; /* 確保圖片在容器內 */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 添加平滑的過渡效果 */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* 鼠標懸停時略微放大 */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* 圖片填滿容器，保持比例 */
+    border-radius: 0; /* 移除圖片圓角，確保無邊框感 */
+}
+
+
+.lightbox {
+    display: none; /* 初始隱藏燈箱 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 黑色半透明背景 */
+    z-index: 1000;
+    overflow: auto;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%; /* 燈箱內容寬度設為 100% 滿版 */
+    height: 100%; /* 燈箱內容高度設為 100% 滿版 */
+    max-width: none; /* 移除最大寬度限制 */
+    margin: 0; /* 移除邊距，讓內容貼合邊緣 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-image {
+    max-width: 100%;
+    max-height: 100%; /* 燈箱照片最大高度設為 100% 滿版 */
+    display: block;
+    border-radius: 0; /* 移除燈箱照片圓角，確保無邊框 */
+    object-fit: contain; /* 確保完整照片顯示，不裁切，並適應螢幕 */
+    width: auto; /* 讓寬度自動調整以配合 contain 或 cover */
+    height: auto; /* 讓高度自動調整以配合 contain 或 cover */
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001; /* 確保關閉按鈕在最上層 */
+}
+
+.prev-button, .next-button {
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    transition: 0.3s;
+    user-select: none;
+    background: none;
+    border: none;
+    padding: 0 15px;
+    z-index: 1001; /* 確保導航按鈕在最上層 */
+}
+
+.prev-button:hover, .next-button:hover {
+    color: #ccc;
+}
