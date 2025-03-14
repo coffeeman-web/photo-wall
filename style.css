@@ -18,6 +18,7 @@ body {
     padding: 0; /* 移除內邊距，更貼合無邊框感 */
     box-shadow: none; /* 移除陰影效果 */
     border-radius: 0; /* 移除圓角 */
+    vertical-align: top;
 }
 
 .gallery-item {
