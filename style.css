@@ -3,8 +3,8 @@ body {
     margin: 0;
     background-color: #f4f4f4; /* 清新淺灰色背景 (您可以自行更換) */
     display: flex;
-    justify-content: top;
-    align-items: center;
+    justify-content: center;
+    align-items: top;
     min-height: 100vh;
 }
 
