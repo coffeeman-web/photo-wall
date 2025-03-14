@@ -59,8 +59,8 @@ body {
     max-width: none; /* 移除最大寬度限制 */
     margin: 0; /* 移除邊距，讓內容貼合邊緣 */
     display: flex;
-    justify-content: top;
-    align-items: top;
+    justify-content: center;
+    align-items: center;
 }
 
 #lightbox-image {
