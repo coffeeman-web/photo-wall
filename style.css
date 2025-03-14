@@ -4,7 +4,7 @@ body {
     background-color: #f4f4f4; /* 清新淺灰色背景 (您可以自行更換) */
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -59,8 +59,8 @@ body {
     max-width: none; /* 移除最大寬度限制 */
     margin: 0; /* 移除邊距，讓內容貼合邊緣 */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: top;
+    align-items: top;
 }
 
 #lightbox-image {
