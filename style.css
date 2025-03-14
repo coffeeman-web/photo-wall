@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #f4f4f4; /* 清新淺灰色背景 (您可以自行更換) */
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     min-height: 100vh;
 }
@@ -17,8 +17,7 @@ body {
     background-color: transparent; /* 設為透明背景，移除底框 */
     padding: 0; /* 移除內邊距，更貼合無邊框感 */
     box-shadow: none; /* 移除陰影效果 */
-    border-radius: 0; /* 移除圓角 */
-    vertical-align: top;
+    border-radius: 0; /* 移除圓角 */    
 }
 
 .gallery-item {
